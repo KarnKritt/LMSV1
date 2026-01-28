@@ -1,5 +1,4 @@
 
-// import { Card } from '@/components/ui/card'
 // Actually, let's just use standard divs with Tailwind since I haven't installed Shadcn UI separately components yet.
 
 export default function AdminDashboard() {
