@@ -69,7 +69,7 @@ export default function DashboardPage() {
 
                 const recommended = courses.filter(course => {
                     if (!course.tags) return false
-                    return course.tags.some(tag => weakCategories.includes(tag))
+                    return course.tags.some((tag: string) => weakCategories.includes(tag))
                 })
 
                 setRecommendedCourses(recommended)
@@ -177,7 +177,7 @@ function CourseCard({ course, recommended = false }: { course: Course, recommend
                     {course.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                    {course.tags?.map(tag => (
+                    {course.tags?.map((tag: string) => (
                         <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
                             {tag}
                         </span>
